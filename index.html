@@ -25,10 +25,10 @@
         
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         
-        body { font-family: 'Inter', sans-serif; color: var(--text-main); background-color: var(--primary-dark); line-height: 1.5; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); background-color: var(--primary-dark); line-height: 1.5; overflow-x: hidden; }
         h1, h2, h3, h4, .logo { font-family: 'Montserrat', sans-serif; }
 
-        .container { max-width: 1200px; width: 100%; margin: 0 auto; }
+        .container { max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 1rem; }
 
         /* LOADING SCREEN STYLES */
         #preloader {
@@ -146,14 +146,14 @@
         nav a { color: #94a3b8; text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: color 0.3s; }
         nav a:hover { color: var(--accent-light); }
 
-        section { padding: 2.6rem 5%; } 
+        section { padding: 3.2rem 5%; } 
         .bg-alt { background-color: var(--bg-surface); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); } 
         
         /* CENTERED SECTION TITLES WITH STYLISH ACCENT LINE */
         h2.section-title { 
             text-align: center; 
             font-size: 1.4rem; 
-            margin-bottom: 1.8rem; 
+            margin-bottom: 2rem; 
             color: var(--text-heading); 
             font-weight: 700; 
             letter-spacing: -0.5px;
@@ -174,8 +174,8 @@
 
         /* HERO SECTION (Centered Layout) */
         #hero { 
-            padding-top: 3.8rem; 
-            padding-bottom: 3.2rem; 
+            padding-top: 4.5rem; 
+            padding-bottom: 3.8rem; 
             background-color: var(--primary-dark);
             background-image: radial-gradient(circle at 50% 20%, rgba(52, 211, 153, 0.04), transparent 35%);
         }
@@ -230,26 +230,27 @@
         }
         .social-links a:hover { color: #ffffff; background-color: rgba(52, 211, 153, 0.12); border-color: var(--accent-light); transform: translateY(-2px); box-shadow: 0 0 12px rgba(52, 211, 153, 0.2); }
         
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.2rem; } 
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; } 
         
-        .card { background: var(--primary-dark); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light); transition: border-color 0.3s; display: flex; flex-direction: column; }
+        .card { background: var(--primary-dark); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); transition: border-color 0.3s; display: flex; flex-direction: column; }
         .card:hover { border-color: rgba(52, 211, 153, 0.35); }
-        .card h3 { color: var(--text-heading); margin-bottom: 0.4rem; font-size: 1.1rem; letter-spacing: -0.3px; }
+        .card h3 { color: var(--text-heading); margin-bottom: 0.5rem; font-size: 1.1rem; letter-spacing: -0.3px; }
         .bg-alt .card { background: var(--bg-surface); }
 
-        .clean-list { list-style-type: none; padding-left: 0; color: #e2e8f0; font-size: 0.9rem; margin-top: 0.2rem; }
-        .clean-list li { margin-bottom: 0.5rem; display: flex; align-items: center; }
-        .clean-list li i { color: var(--primary-accent); margin-right: 10px; font-size: 0.55rem; }
+        .clean-list { list-style-type: none; padding-left: 0; color: #e2e8f0; font-size: 0.9rem; margin-top: 0.4rem; }
+        .clean-list li { margin-bottom: 0.6rem; display: flex; align-items: center; }
+        .clean-list li i { color: var(--primary-accent); margin-right: 10px; font-size: 0.5rem; }
 
         .project-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; color: var(--accent-light); text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 6px 12px; border: 1px solid rgba(52, 211, 153, 0.25); border-radius: 4px; transition: all 0.3s ease; align-self: flex-start; }
         .project-link:hover { background-color: rgba(52, 211, 153, 0.1); border-color: var(--primary-accent); color: #ffffff; }
 
-        /* HORIZONTAL SCROLLING CERTIFICATIONS */
+        /* HORIZONTAL SCROLLING CERTIFICATIONS (Responsive Width & Touch-Friendly) */
         .cert-scroll-container {
             display: flex;
             gap: 1.2rem;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
             padding-bottom: 1rem;
             margin-top: 0.5rem;
         }
@@ -268,18 +269,19 @@
             background: var(--primary-accent);
         }
         .cert-scroll-item {
-            min-width: 300px;
-            max-width: 300px;
+            min-width: 280px;
+            max-width: 320px;
+            width: 85vw;
             flex: 0 0 auto;
             scroll-snap-align: start;
         }
 
-        .cert-card { background: var(--bg-surface); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; flex-direction: column; transition: border-color 0.3s; }
+        .cert-card { background: var(--bg-surface); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; flex-direction: column; transition: border-color 0.3s; height: 100%; }
         .cert-card:hover { border-color: rgba(52, 211, 153, 0.35); }
         .cert-card .timeline-date { margin-bottom: 0.4rem; color: var(--accent-light); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
         .cert-card h3 { font-size: 1rem; margin-bottom: 0.2rem; color: var(--text-heading); line-height: 1.3; }
         .cert-card h4 { font-family: 'Inter', sans-serif; font-size: 0.81rem; font-weight: 500; color: #94a3b8; margin-bottom: 1rem; flex-grow: 1; }
-        .cert-image { width: 100%; height: 130px; object-fit: cover; object-position: top; border-radius: 4px; margin-bottom: 0.8rem; border: 1px solid var(--border-light); }
+        .cert-image { width: 100%; height: 140px; object-fit: cover; object-position: top; border-radius: 4px; margin-bottom: 0.8rem; border: 1px solid var(--border-light); }
         .cert-link { display: inline-flex; align-items: center; gap: 5px; margin-top: auto; color: var(--accent-light); text-decoration: none; font-weight: 500; font-size: 0.8rem; padding: 5px 10px; border: 1px solid var(--border-light); border-radius: 4px; transition: all 0.3s ease; }
         .cert-link:hover { background-color: rgba(52, 211, 153, 0.1); border-color: var(--primary-accent); }
 
@@ -355,7 +357,7 @@
         .project-screenshots { display: flex; gap: 10px; margin-bottom: 1rem; }
         .project-thumb {
             width: 100%;
-            height: 110px;
+            height: 120px;
             object-fit: cover;
             border-radius: 4px;
             border: 1px solid var(--border-light);
@@ -379,13 +381,20 @@
         
         .edu-school-img { width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-light); }
 
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px 12px; margin-bottom: 0.8rem; border: 1px solid var(--border-light); border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.85rem; background-color: var(--primary-dark); color: var(--text-heading); transition: border-color 0.3s; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 1rem; border: 1px solid var(--border-light); border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.85rem; background-color: var(--primary-dark); color: var(--text-heading); transition: border-color 0.3s; }
         .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-accent); }
 
         .contact-info-list p { display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; font-size: 0.85rem; }
         .contact-info-list i { color: var(--accent-light); font-size: 1.1rem; width: 20px; text-align: center; }
 
-        footer { text-align: center; padding: 1.8rem; background-color: var(--primary-dark); color: #64748b; font-size: 0.85rem; border-top: 1px solid var(--border-light); }
+        footer { text-align: center; padding: 2rem; background-color: var(--primary-dark); color: #64748b; font-size: 0.85rem; border-top: 1px solid var(--border-light); }
+
+        /* Mobile Responsiveness Improvements */
+        @media (max-width: 768px) {
+            .hero-text h1 { font-size: 2.2rem; }
+            nav ul { gap: 1rem; font-size: 0.8rem; }
+            section { padding: 2.5rem 1.2rem; }
+        }
     </style>
 </head>
 <body>
@@ -419,7 +428,7 @@
 
     <section id="hero">
         <div class="container hero-layout">
-            <img src="profile.jpg" alt="Norman Jay V. Olipas" class="hero-image">
+            <img src="profile.jpg" alt="Norman Jay V. Olipas Portrait" class="hero-image">
             <div class="hero-text">
                 <h1>Norman Jay V. Olipas</h1>
                 <h3>Aspiring Network Security Professional</h3>
@@ -487,10 +496,10 @@
                 <div class="card">
                     <div class="project-screenshots">
                         <a href="#modal-pdaolink-1" style="flex: 1;">
-                            <img src="pdaolink-1.jpg" alt="PDAOLink Interface" class="project-thumb">
+                            <img src="pdaolink-1.jpg" alt="PDAOLink Interface Thumbnail" class="project-thumb">
                         </a>
                         <a href="#modal-pdaolink-2" style="flex: 1;">
-                            <img src="pdaolink-2.jpg" alt="PDAOLink Authentication" class="project-thumb">
+                            <img src="pdaolink-2.jpg" alt="PDAOLink Authentication Thumbnail" class="project-thumb">
                         </a>
                     </div>
                     <h3>PDAOLink System</h3>
@@ -536,53 +545,65 @@
             <h2 class="section-title">Certifications & Seminars</h2>
             <div class="cert-scroll-container">
                 
-                <div class="cert-card cert-scroll-item">
-                    <img src="cert_tesda.jpg" alt="TESDA Certificate" class="cert-image">
-                    <div class="timeline-date">August 23, 2026</div>
-                    <h3>Microsoft Cybersecurity: Security & Identity</h3>
-                    <h4>TESDA</h4>
-                    <a href="cert_tesda.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                <div class="cert-scroll-item">
+                    <div class="cert-card">
+                        <img src="cert_tesda.jpg" alt="Microsoft Cybersecurity Certificate" class="cert-image">
+                        <div class="timeline-date">August 23, 2026</div>
+                        <h3>Microsoft Cybersecurity: Security & Identity</h3>
+                        <h4>TESDA</h4>
+                        <a href="cert_tesda.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                    </div>
                 </div>
 
-                <div class="cert-card cert-scroll-item">
-                    <img src="cert_ai_security.jpg" alt="AI Security Summit" class="cert-image">
-                    <div class="timeline-date">August 19, 2026</div>
-                    <h3>AI Security Summit</h3>
-                    <h4>Cloud Security Alliance (CSA)</h4>
-                    <a href="cert_ai_security.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                <div class="cert-scroll-item">
+                    <div class="cert-card">
+                        <img src="cert_ai_security.jpg" alt="AI Security Summit Certificate" class="cert-image">
+                        <div class="timeline-date">August 19, 2026</div>
+                        <h3>AI Security Summit</h3>
+                        <h4>Cloud Security Alliance (CSA)</h4>
+                        <a href="cert_ai_security.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                    </div>
                 </div>
 
-                <div class="cert-card cert-scroll-item">
-                    <img src="cert_dict.jpg" alt="DICT Certificate" class="cert-image">
-                    <div class="timeline-date">August 13, 2026</div>
-                    <h3>Don’t Get Hacked: Secure your Digital Life</h3>
-                    <h4>DICT Region V</h4>
-                    <a href="cert_dict.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                <div class="cert-scroll-item">
+                    <div class="cert-card">
+                        <img src="cert_dict.jpg" alt="DICT Certificate" class="cert-image">
+                        <div class="timeline-date">August 13, 2026</div>
+                        <h3>Don’t Get Hacked: Secure your Digital Life</h3>
+                        <h4>DICT Region V</h4>
+                        <a href="cert_dict.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                    </div>
                 </div>
 
-                <div class="cert-card cert-scroll-item">
-                    <img src="cert_threat_management.jpg" alt="Cyber Threat Management" class="cert-image">
-                    <div class="timeline-date">January 30, 2026</div>
-                    <h3>Cyber Threat Management</h3>
-                    <h4>DICT-ITU DTC Initiative / Cisco Networking Academy</h4>
-                    <a href="cert_threat_management.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                <div class="cert-scroll-item">
+                    <div class="cert-card">
+                        <img src="cert_threat_management.jpg" alt="Cyber Threat Management Certificate" class="cert-image">
+                        <div class="timeline-date">January 30, 2026</div>
+                        <h3>Cyber Threat Management</h3>
+                        <h4>DICT-ITU DTC Initiative / Cisco Networking Academy</h4>
+                        <a href="cert_threat_management.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                    </div>
                 </div>
 
-                <div class="cert-card cert-scroll-item">
-                    <img src="cert_intro_cyber.jpg" alt="Introduction to Cybersecurity" class="cert-image">
-                    <div class="timeline-date">January 29, 2026</div>
-                    <h3>Introduction to Cybersecurity</h3>
-                    <h4>DICT-ITU DTC Initiative / Cisco Networking Academy</h4>
-                    <a href="cert_intro_cyber.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                <div class="cert-scroll-item">
+                    <div class="cert-card">
+                        <img src="cert_intro_cyber.jpg" alt="Introduction to Cybersecurity Certificate" class="cert-image">
+                        <div class="timeline-date">January 29, 2026</div>
+                        <h3>Introduction to Cybersecurity</h3>
+                        <h4>DICT-ITU DTC Initiative / Cisco Networking Academy</h4>
+                        <a href="cert_intro_cyber.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
+                    </div>
                 </div>
 
                 <!-- GICAST Card with Interactive Verification Modal -->
-                <div class="cert-card cert-scroll-item">
-                    <img src="cert_gicast.jpg" alt="GICAST Certificate" class="cert-image">
-                    <div class="timeline-date">May 19, 2025</div>
-                    <h3>Gamified Cyber Aptitude & Skills Training</h3>
-                    <h4>The Open University</h4>
-                    <a href="#modal-gicast" class="cert-link"><i class="fas fa-search-plus"></i> Quick View & Verify</a>
+                <div class="cert-scroll-item">
+                    <div class="cert-card">
+                        <img src="cert_gicast.jpg" alt="GICAST Certificate" class="cert-image">
+                        <div class="timeline-date">May 19, 2025</div>
+                        <h3>Gamified Cyber Aptitude & Skills Training</h3>
+                        <h4>The Open University</h4>
+                        <a href="#modal-gicast" class="cert-link"><i class="fas fa-search-plus"></i> Quick View & Verify</a>
+                    </div>
                 </div>
 
             </div>
@@ -594,7 +615,7 @@
         <div class="modal-content">
             <a href="#certifications" class="modal-close">&times;</a>
             <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Gamified Cyber Aptitude & Skills Training (GICAST)</h3>
-            <img src="cert_gicast.jpg" alt="GICAST Certificate" class="modal-img">
+            <img src="cert_gicast.jpg" alt="GICAST Certificate Full Size" class="modal-img">
             
             <!-- Official OpenLearn Verification Link with Paraphrased Text -->
             <a href="https://www.open.edu/openlearn/badges/badge.php?hash=7d92d7f245f9cef79de07872460ccb901049aa28" target="_blank" class="verify-btn">
@@ -644,7 +665,7 @@
                     <div class="edu-toggle-hint"><i class="fas fa-chevron-down"></i> Click to view school</div>
                     
                     <div class="edu-image-reveal">
-                        <img src="ccsths-campus.jpg" alt="Cauayan City Science and Tech High School" class="edu-school-img">
+                        <img src="ccsths-campus.jpg" alt="Cauayan City Science and Tech High School Campus" class="edu-school-img">
                     </div>
                 </div>
 
@@ -662,7 +683,7 @@
                     <div class="edu-toggle-hint"><i class="fas fa-chevron-down"></i> Click to view school</div>
                     
                     <div class="edu-image-reveal">
-                        <img src="cutog-campus.jpg" alt="Cutog Grande Elementary School" class="edu-school-img">
+                        <img src="cutog-campus.jpg" alt="Cutog Grande Elementary School Campus" class="edu-school-img">
                     </div>
                 </div>
 
@@ -726,7 +747,7 @@
                 }
                 counter.innerText = currentPercent + "%";
                 bar.style.width = currentPercent + "%";
-            }, 60); // Slower interval delay (60ms instead of 40ms)
+            }, 60); // Slower interval delay (60ms)
         });
     </script>
 
