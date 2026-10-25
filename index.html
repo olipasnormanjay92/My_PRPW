@@ -176,7 +176,13 @@
             background: linear-gradient(135deg, var(--primary-accent), transparent);
             border-radius: 50%;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            animation: image-float 1.4s ease-out forwards;
         }
+        @keyframes image-float {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
         .hero-image { 
             width: 210px; height: 210px; border-radius: 50%; object-fit: cover; 
             border: 3px solid var(--primary-dark); display: block;
@@ -186,20 +192,49 @@
 
         .hero-text { width: 100%; }
         
-        /* SHIMMER ANIMATION FOR PROFILE NAME */
+        /* PREMIUM ANIMATED GRADIENT & SHIMMER FOR PROFILE NAME */
         .hero-text h1 { 
-            font-size: 2.8rem; margin-bottom: 0.3rem; font-weight: 800; line-height: 1.1; letter-spacing: -1px; 
-            background: linear-gradient(90deg, #ffffff, var(--primary-accent), #ffffff); 
-            background-size: 200% auto;
-            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; 
-            animation: text-shimmer 6s linear infinite;
+            font-size: 2.8rem; 
+            margin-bottom: 0.3rem; 
+            font-weight: 800; 
+            line-height: 1.1; 
+            letter-spacing: -1px; 
+            background: linear-gradient(135deg, #ffffff 20%, var(--primary-accent) 50%, var(--accent-light) 80%); 
+            background-size: 250% auto;
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            animation: name-shimmer 6s ease infinite, name-slide-up 1s ease-out forwards;
         }
-        @keyframes text-shimmer {
-            to { background-position: 200% center; }
+        @keyframes name-shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes name-slide-up {
+            0% { opacity: 0; transform: translateY(25px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
-        .hero-text h3 { font-size: 1.1rem; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600; }
-        .hero-text p { font-size: 0.95rem; margin-bottom: 1.5rem; color: #94a3b8; max-width: 700px; margin-left: auto; margin-right: auto; } 
+        /* SUBTITLE ENTRANCE ANIMATION */
+        .hero-text h3 { 
+            font-size: 1.1rem; 
+            color: var(--accent-light); 
+            margin-bottom: 1rem; 
+            font-weight: 600; 
+            opacity: 0;
+            animation: subtitle-fade 1s ease-out 0.3s forwards;
+        }
+        @keyframes subtitle-fade {
+            0% { opacity: 0; transform: translateY(15px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-text p { 
+            font-size: 0.95rem; margin-bottom: 1.5rem; color: #94a3b8; max-width: 700px; margin-left: auto; margin-right: auto; 
+            opacity: 0;
+            animation: subtitle-fade 1s ease-out 0.5s forwards;
+        } 
         
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.7rem 1.5rem; background-color: var(--primary-accent); color: #0f172a; font-family: 'Inter', sans-serif; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; cursor: pointer; border: none; }
         .btn:hover { background-color: #059669; color: #ffffff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(52, 211, 153, 0.4); }
