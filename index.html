@@ -78,15 +78,27 @@
         section { padding: 2.6rem 5%; } 
         .bg-alt { background-color: var(--bg-surface); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); } 
         
+        /* CENTERED SECTION TITLES WITH STYLISH ACCENT LINE */
         h2.section-title { 
-            text-align: left; 
+            text-align: center; 
             font-size: 1.4rem; 
-            margin-bottom: 1.2rem; 
+            margin-bottom: 1.8rem; 
             color: var(--text-heading); 
             font-weight: 700; 
             letter-spacing: -0.5px;
-            border-bottom: 1px solid rgba(52, 211, 153, 0.25); 
-            padding-bottom: 0.4rem; 
+            position: relative;
+            padding-bottom: 0.6rem; 
+        }
+        h2.section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-accent);
+            border-radius: 2px;
         }
 
         /* HERO SECTION (Centered Layout) */
