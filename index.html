@@ -707,7 +707,7 @@
         <p>&copy; 2026 Norman Jay V. Olipas. Professional Resume Portfolio.</p>
     </footer>
 
-    <!-- LOADING COUNTER SCRIPT -->
+    <!-- LOADING COUNTER SCRIPT (Slower & Smoother) -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let counter = document.getElementById("load-counter");
@@ -716,17 +716,17 @@
             
             let currentPercent = 0;
             let loadInterval = setInterval(function() {
-                currentPercent += Math.floor(Math.random() * 8) + 3; // Random speed increment
+                currentPercent += Math.floor(Math.random() * 3) + 1; // Slower increments (1 to 3%)
                 if (currentPercent >= 100) {
                     currentPercent = 100;
                     clearInterval(loadInterval);
                     setTimeout(function() {
                         preloader.classList.add("fade-out");
-                    }, 200);
+                    }, 300);
                 }
                 counter.innerText = currentPercent + "%";
                 bar.style.width = currentPercent + "%";
-            }, 40);
+            }, 60); // Slower interval delay (60ms instead of 40ms)
         });
     </script>
 
