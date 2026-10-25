@@ -185,11 +185,19 @@
         .hero-image-wrapper:hover .hero-image { transform: scale(1.02); }
 
         .hero-text { width: 100%; }
+        
+        /* SHIMMER ANIMATION FOR PROFILE NAME */
         .hero-text h1 { 
             font-size: 2.8rem; margin-bottom: 0.3rem; font-weight: 800; line-height: 1.1; letter-spacing: -1px; 
-            background: linear-gradient(90deg, #ffffff, var(--primary-accent)); 
+            background: linear-gradient(90deg, #ffffff, var(--primary-accent), #ffffff); 
+            background-size: 200% auto;
             -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; 
+            animation: text-shimmer 6s linear infinite;
         }
+        @keyframes text-shimmer {
+            to { background-position: 200% center; }
+        }
+
         .hero-text h3 { font-size: 1.1rem; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600; }
         .hero-text p { font-size: 0.95rem; margin-bottom: 1.5rem; color: #94a3b8; max-width: 700px; margin-left: auto; margin-right: auto; } 
         
