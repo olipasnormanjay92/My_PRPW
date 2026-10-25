@@ -25,11 +25,13 @@
         
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         
+        /* Custom Text Selection Highlight */
+        ::selection { background-color: var(--primary-accent); color: #0f172a; }
+
         body { 
             font-family: 'Inter', sans-serif; 
             color: var(--text-main); 
             background-color: var(--primary-dark); 
-            /* Cyber-security grid pattern layered over a deep charcoal gradient */
             background-image: 
                 radial-gradient(circle at 50% 0%, rgba(52, 211, 153, 0.07) 0%, transparent 40%),
                 radial-gradient(circle at 10% 80%, rgba(30, 58, 138, 0.15) 0%, transparent 50%),
@@ -40,7 +42,7 @@
             position: relative;
         }
 
-        /* Floating Ambient Glow Orbs for High-End Tech Aesthetic */
+        /* Floating Ambient Glow Orbs */
         body::before {
             content: '';
             position: fixed;
@@ -80,25 +82,14 @@
             z-index: 9999;
             transition: opacity 0.6s ease, visibility 0.6s ease;
         }
-        #preloader.fade-out {
-            opacity: 0;
-            visibility: hidden;
-        }
+        #preloader.fade-out { opacity: 0; visibility: hidden; }
         .loader-badge {
-            width: 60px;
-            height: 60px;
+            width: 60px; height: 60px;
             background: linear-gradient(135deg, var(--primary-accent), #059669);
-            color: #0f172a;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            border: 2px solid rgba(52, 211, 153, 0.4);
-            box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
-            margin-bottom: 1.2rem;
+            color: #0f172a; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.3rem;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; border: 2px solid rgba(52, 211, 153, 0.4);
+            box-shadow: 0 0 20px rgba(52, 211, 153, 0.4); margin-bottom: 1.2rem;
             animation: pulse-glow 1.5s infinite alternate;
         }
         @keyframes pulse-glow {
@@ -106,159 +97,108 @@
             100% { transform: scale(1.08); box-shadow: 0 0 25px rgba(52, 211, 153, 0.7); }
         }
         .loader-percentage {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-heading);
-            margin-bottom: 0.8rem;
-            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--text-heading); margin-bottom: 0.8rem; letter-spacing: 1px;
         }
-        .loader-bar-container {
-            width: 220px;
-            height: 6px;
-            background-color: var(--bg-surface);
-            border-radius: 4px;
-            border: 1px solid var(--border-light);
-            overflow: hidden;
-        }
-        .loader-bar-fill {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-accent), var(--accent-light));
-            border-radius: 4px;
-            transition: width 0.1s linear;
-        }
-        .loader-text {
-            font-size: 0.8rem;
-            color: var(--text-main);
-            margin-top: 0.6rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
+        .loader-bar-container { width: 220px; height: 6px; background-color: var(--bg-surface); border-radius: 4px; border: 1px solid var(--border-light); overflow: hidden; }
+        .loader-bar-fill { width: 0%; height: 100%; background: linear-gradient(90deg, var(--primary-accent), var(--accent-light)); border-radius: 4px; transition: width 0.1s linear; }
+        .loader-text { font-size: 0.8rem; color: var(--text-main); margin-top: 0.6rem; letter-spacing: 0.5px; text-transform: uppercase; }
 
         /* Sleek Glassmorphism Navigation */
         nav { background-color: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); padding: 0.8rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-light); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; }
         
-        /* CIRCULAR NJ LOGO & BRAND */
         .logo-wrapper { display: flex; align-items: center; gap: 10px; cursor: default; }
         .logo-badge {
-            width: 34px;
-            height: 34px;
+            width: 34px; height: 34px;
             background: linear-gradient(135deg, var(--primary-accent), #059669);
-            color: #0f172a;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            border: 2px solid rgba(52, 211, 153, 0.4);
+            color: #0f172a; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.85rem;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; border: 2px solid rgba(52, 211, 153, 0.4);
             box-shadow: 0 0 10px rgba(52, 211, 153, 0.25);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
-        .logo-wrapper:hover .logo-badge {
-            transform: scale(1.05);
-            border-color: var(--accent-light);
-        }
+        .logo-wrapper:hover .logo-badge { transform: scale(1.05); border-color: var(--accent-light); }
         .logo { 
-            font-size: 1.1rem; 
-            font-weight: 800; 
-            letter-spacing: -0.5px; 
+            font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; 
             background: linear-gradient(90deg, #ffffff, var(--accent-light)); 
-            -webkit-background-clip: text; 
-            background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            filter: drop-shadow(0 0 4px rgba(52, 211, 153, 0.3));
-            transition: filter 0.3s ease;
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; 
+            filter: drop-shadow(0 0 4px rgba(52, 211, 153, 0.3)); transition: filter 0.3s ease;
         }
-        .logo-wrapper:hover .logo {
-            filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.6));
-        }
+        .logo-wrapper:hover .logo { filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.6)); }
 
-        nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
-        nav a { color: #94a3b8; text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: color 0.3s; }
+        nav ul { list-style: none; display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: center; }
+        nav a { color: #94a3b8; text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: color 0.3s ease; position: relative; padding-bottom: 2px; }
         nav a:hover { color: var(--accent-light); }
+        nav a::after {
+            content: ''; position: absolute; bottom: -2px; left: 0; width: 0%; height: 2px;
+            background-color: var(--primary-accent); transition: width 0.3s ease; border-radius: 2px;
+        }
+        nav a:hover::after { width: 100%; }
 
-        section { padding: 3.2rem 5%; } 
+        section { padding: 3.8rem 5%; } 
         .bg-alt { background-color: rgba(30, 41, 59, 0.4); backdrop-filter: blur(8px); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); } 
         
-        /* CENTERED SECTION TITLES WITH STYLISH ACCENT LINE */
+        /* DESIGN TOUCH: Micro Section Tracker Badges & Enhanced Titles */
+        .section-tag {
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-accent);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .section-tag::before, .section-tag::after {
+            content: ''; width: 20px; height: 1px; background: rgba(52, 211, 153, 0.4);
+        }
         h2.section-title { 
-            text-align: center; 
-            font-size: 1.4rem; 
-            margin-bottom: 2rem; 
-            color: var(--text-heading); 
-            font-weight: 700; 
-            letter-spacing: -0.5px;
-            position: relative;
-            padding-bottom: 0.6rem; 
+            text-align: center; font-size: 1.5rem; margin-bottom: 2.5rem; 
+            color: var(--text-heading); font-weight: 700; letter-spacing: -0.5px;
+            position: relative; padding-bottom: 0.6rem; 
         }
         h2.section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-accent);
-            border-radius: 2px;
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 40px; height: 3px; background-color: var(--primary-accent); border-radius: 2px;
         }
 
         /* HERO SECTION */
-        #hero { 
-            padding-top: 4.5rem; 
-            padding-bottom: 3.8rem; 
-            background-color: transparent;
-        }
-
-        .hero-layout {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            gap: 1.5rem; 
-        }
+        #hero { padding-top: 5rem; padding-bottom: 4rem; background-color: transparent; }
+        .hero-layout { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 800px; margin: 0 auto; gap: 1.5rem; }
         
+        .hero-image-wrapper {
+            position: relative;
+            padding: 5px;
+            background: linear-gradient(135deg, var(--primary-accent), transparent);
+            border-radius: 50%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
         .hero-image { 
-            width: 220px; 
-            height: 220px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 3px solid rgba(52, 211, 153, 0.5); 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6); 
-            transition: transform 0.3s ease, border-color 0.3s ease; 
+            width: 210px; height: 210px; border-radius: 50%; object-fit: cover; 
+            border: 3px solid var(--primary-dark); display: block;
+            transition: transform 0.3s ease; 
         }
-        .hero-image:hover { 
-            transform: scale(1.03); 
-            border-color: var(--accent-light); 
-        }
+        .hero-image-wrapper:hover .hero-image { transform: scale(1.02); }
 
         .hero-text { width: 100%; }
         .hero-text h1 { 
-            font-size: 2.8rem; 
-            margin-bottom: 0.2rem; 
-            font-weight: 800; 
-            line-height: 1.1; 
-            letter-spacing: -1px; 
+            font-size: 2.8rem; margin-bottom: 0.3rem; font-weight: 800; line-height: 1.1; letter-spacing: -1px; 
             background: linear-gradient(90deg, #ffffff, var(--primary-accent)); 
-            -webkit-background-clip: text; 
-            background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; 
         }
-        .hero-text h3 { font-size: 1.1rem; color: var(--accent-light); margin-bottom: 0.8rem; font-weight: 600; }
-        .hero-text p { font-size: 0.95rem; margin-bottom: 1.2rem; color: #94a3b8; max-width: 700px; margin-left: auto; margin-right: auto; } 
+        .hero-text h3 { font-size: 1.1rem; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600; }
+        .hero-text p { font-size: 0.95rem; margin-bottom: 1.5rem; color: #94a3b8; max-width: 700px; margin-left: auto; margin-right: auto; } 
         
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.6rem 1.4rem; background-color: var(--primary-accent); color: #0f172a; font-family: 'Inter', sans-serif; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; cursor: pointer; border: none; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.7rem 1.5rem; background-color: var(--primary-accent); color: #0f172a; font-family: 'Inter', sans-serif; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; cursor: pointer; border: none; }
         .btn:hover { background-color: #059669; color: #ffffff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(52, 211, 153, 0.4); }
 
         /* Radiant Boxes for Social Links */
-        .social-links { display: flex; gap: 0.6rem; margin-top: 1.5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
-        .social-links-title { width: 100%; color: #94a3b8; font-size: 0.85rem; margin-bottom: 0.2rem; }
+        .social-links { display: flex; gap: 0.6rem; margin-top: 1.8rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+        .social-links-title { width: 100%; color: #94a3b8; font-size: 0.85rem; margin-bottom: 0.3rem; }
         .social-links a { 
             display: inline-flex; align-items: center; gap: 6px; color: #e2e8f0; text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 6px; background: rgba(30, 41, 59, 0.75); backdrop-filter: blur(5px); border: 1px solid rgba(52, 211, 153, 0.3); transition: all 0.3s ease; 
         }
@@ -266,147 +206,81 @@
         
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; } 
         
-        /* Glassmorphism Cards */
-        .card { background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; display: flex; flex-direction: column; }
-        .card:hover { border-color: rgba(52, 211, 153, 0.5); box-shadow: 0 8px 30px rgba(52, 211, 153, 0.12); transform: translateY(-2px); }
-        .card h3 { color: var(--text-heading); margin-bottom: 0.5rem; font-size: 1.1rem; letter-spacing: -0.3px; }
+        /* DESIGN TOUCH: Elevated Glassmorphism Cards with Mint Glow on Hover */
+        .card { 
+            background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(10px); 
+            padding: 1.6rem; border-radius: 10px; border: 1px solid var(--border-light); 
+            transition: all 0.3s ease; display: flex; flex-direction: column; 
+            position: relative; overflow: hidden;
+        }
+        .card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%;
+            background: var(--primary-accent); opacity: 0.4; transition: opacity 0.3s ease;
+        }
+        .card:hover { border-color: rgba(52, 211, 153, 0.6); box-shadow: 0 10px 30px rgba(52, 211, 153, 0.12); transform: translateY(-3px); }
+        .card:hover::before { opacity: 1; }
+        .card h3 { color: var(--text-heading); margin-bottom: 0.6rem; font-size: 1.1rem; letter-spacing: -0.3px; }
         .bg-alt .card { background: rgba(30, 41, 59, 0.7); }
 
         .clean-list { list-style-type: none; padding-left: 0; color: #e2e8f0; font-size: 0.9rem; margin-top: 0.4rem; }
-        .clean-list li { margin-bottom: 0.6rem; display: flex; align-items: center; }
-        .clean-list li i { color: var(--primary-accent); margin-right: 10px; font-size: 0.5rem; }
+        .clean-list li { margin-bottom: 0.7rem; display: flex; align-items: center; }
+        .clean-list li i { color: var(--primary-accent); margin-right: 12px; font-size: 0.5rem; background: rgba(52, 211, 153, 0.15); padding: 6px; border-radius: 50%; }
 
         .project-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; color: var(--accent-light); text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 6px 12px; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 4px; transition: all 0.3s ease; align-self: flex-start; }
         .project-link:hover { background-color: rgba(52, 211, 153, 0.15); border-color: var(--primary-accent); color: #ffffff; }
 
         /* HORIZONTAL SCROLLING CERTIFICATIONS */
         .cert-scroll-container {
-            display: flex;
-            gap: 1.2rem;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            padding-bottom: 1rem;
-            margin-top: 0.5rem;
+            display: flex; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; padding-bottom: 1rem; margin-top: 0.5rem;
         }
-        .cert-scroll-container::-webkit-scrollbar {
-            height: 8px;
-        }
-        .cert-scroll-container::-webkit-scrollbar-track {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 4px;
-        }
-        .cert-scroll-container::-webkit-scrollbar-thumb {
-            background: rgba(52, 211, 153, 0.4);
-            border-radius: 4px;
-        }
-        .cert-scroll-container::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-accent);
-        }
-        .cert-scroll-item {
-            min-width: 280px;
-            max-width: 320px;
-            width: 85vw;
-            flex: 0 0 auto;
-            scroll-snap-align: start;
-        }
+        .cert-scroll-container::-webkit-scrollbar { height: 6px; }
+        .cert-scroll-container::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); border-radius: 4px; }
+        .cert-scroll-container::-webkit-scrollbar-thumb { background: rgba(52, 211, 153, 0.4); border-radius: 4px; }
+        .cert-scroll-container::-webkit-scrollbar-thumb:hover { background: var(--primary-accent); }
+        .cert-scroll-item { min-width: 280px; max-width: 320px; width: 85vw; flex: 0 0 auto; scroll-snap-align: start; }
 
-        .cert-card { background: rgba(30, 41, 59, 0.75); backdrop-filter: blur(8px); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; flex-direction: column; transition: border-color 0.3s, transform 0.3s; height: 100%; }
-        .cert-card:hover { border-color: rgba(52, 211, 153, 0.5); transform: translateY(-3px); }
+        .cert-card { background: rgba(30, 41, 59, 0.75); backdrop-filter: blur(8px); padding: 1.2rem; border-radius: 10px; border: 1px solid var(--border-light); display: flex; flex-direction: column; transition: all 0.3s ease; height: 100%; }
+        .cert-card:hover { border-color: rgba(52, 211, 153, 0.5); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
         .cert-card .timeline-date { margin-bottom: 0.4rem; color: var(--accent-light); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
         .cert-card h3 { font-size: 1rem; margin-bottom: 0.2rem; color: var(--text-heading); line-height: 1.3; }
         .cert-card h4 { font-family: 'Inter', sans-serif; font-size: 0.81rem; font-weight: 500; color: #94a3b8; margin-bottom: 1rem; flex-grow: 1; }
-        .cert-image { width: 100%; height: 140px; object-fit: cover; object-position: top; border-radius: 4px; margin-bottom: 0.8rem; border: 1px solid var(--border-light); }
-        .cert-link { display: inline-flex; align-items: center; gap: 5px; margin-top: auto; color: var(--accent-light); text-decoration: none; font-weight: 500; font-size: 0.8rem; padding: 5px 10px; border: 1px solid var(--border-light); border-radius: 4px; transition: all 0.3s ease; }
+        .cert-image { width: 100%; height: 140px; object-fit: cover; object-position: top; border-radius: 6px; margin-bottom: 0.8rem; border: 1px solid var(--border-light); }
+        .cert-link { display: inline-flex; align-items: center; gap: 5px; margin-top: auto; color: var(--accent-light); text-decoration: none; font-weight: 500; font-size: 0.8rem; padding: 6px 10px; border: 1px solid var(--border-light); border-radius: 4px; transition: all 0.3s ease; }
         .cert-link:hover { background-color: rgba(52, 211, 153, 0.15); border-color: var(--primary-accent); }
 
         /* Certificate & Project Modal Popup Styles */
         .cert-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px);
+            justify-content: center; align-items: center; padding: 20px;
         }
-        .cert-modal:target {
-            display: flex;
-        }
+        .cert-modal:target { display: flex; }
         .modal-content {
-            background: rgba(30, 41, 59, 0.95);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(52, 211, 153, 0.4);
-            padding: 25px;
-            border-radius: 12px;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-            position: relative;
+            background: rgba(30, 41, 59, 0.95); backdrop-filter: blur(15px);
+            border: 1px solid rgba(52, 211, 153, 0.4); padding: 25px; border-radius: 12px;
+            max-width: 600px; width: 100%; text-align: center; position: relative;
             box-shadow: 0 20px 40px rgba(0,0,0,0.7);
         }
-        .modal-close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: #94a3b8;
-            font-size: 1.5rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .modal-close:hover {
-            color: var(--accent-light);
-        }
-        .modal-img {
-            width: 100%;
-            max-height: 350px;
-            object-fit: contain;
-            border-radius: 6px;
-            border: 1px solid var(--border-light);
-            margin-bottom: 1rem;
-        }
+        .modal-close { position: absolute; top: 15px; right: 20px; color: #94a3b8; font-size: 1.5rem; text-decoration: none; font-weight: bold; }
+        .modal-close:hover { color: var(--accent-light); }
+        .modal-img { width: 100%; max-height: 350px; object-fit: contain; border-radius: 6px; border: 1px solid var(--border-light); margin-bottom: 1rem; }
         .verify-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: var(--primary-accent);
-            color: #0f172a;
-            font-weight: 700;
-            padding: 0.7rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            background-color: var(--primary-accent); color: #0f172a; font-weight: 700;
+            padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; margin-bottom: 1rem; transition: all 0.3s ease;
         }
-        .verify-btn:hover {
-            background-color: #059669;
-            color: #ffffff;
-            box-shadow: 0 5px 15px rgba(52, 211, 153, 0.4);
-        }
+        .verify-btn:hover { background-color: #059669; color: #ffffff; box-shadow: 0 5px 15px rgba(52, 211, 153, 0.4); }
 
         .project-screenshots { display: flex; gap: 10px; margin-bottom: 1rem; }
         .project-thumb {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 4px;
-            border: 1px solid var(--border-light);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            width: 100%; height: 120px; object-fit: cover; border-radius: 6px;
+            border: 1px solid var(--border-light); transition: transform 0.3s ease, border-color 0.3s ease;
         }
-        .project-thumb:hover {
-            transform: scale(1.02);
-            border-color: var(--accent-light);
-        }
+        .project-thumb:hover { transform: scale(1.02); border-color: var(--accent-light); }
 
         /* EDUCATION INTERACTIVE ACCORDION CARDS */
         .edu-card { cursor: pointer; position: relative; user-select: none; }
-        
         .edu-toggle-hint { display: inline-flex; align-items: center; gap: 6px; color: var(--accent-light); font-size: 0.8rem; font-weight: 500; margin-top: 0.8rem; transition: color 0.3s; }
         .edu-card:hover .edu-toggle-hint { color: #ffffff; }
         .edu-toggle-hint i { transition: transform 0.4s ease; }
@@ -414,14 +288,21 @@
         
         .edu-image-reveal { max-height: 0; opacity: 0; overflow: hidden; transition: all 0.5s ease-in-out; }
         .edu-card.active .edu-image-reveal { max-height: 400px; opacity: 1; margin-top: 1.2rem; }
-        
         .edu-school-img { width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-light); }
 
-        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 1rem; border: 1px solid var(--border-light); border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.85rem; background-color: rgba(15, 23, 42, 0.8); color: var(--text-heading); transition: border-color 0.3s; }
-        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-accent); }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 12px; margin-bottom: 1rem; border: 1px solid var(--border-light);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.85rem;
+            background-color: rgba(15, 23, 42, 0.8); color: var(--text-heading); transition: border-color 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-accent); box-shadow: 0 0 8px rgba(52, 211, 153, 0.25); }
 
-        .contact-info-list p { display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; font-size: 0.85rem; }
-        .contact-info-list i { color: var(--accent-light); font-size: 1.1rem; width: 20px; text-align: center; }
+        .contact-info-list p { display: flex; align-items: center; gap: 12px; margin-bottom: 0.9rem; font-size: 0.85rem; }
+        .contact-info-list i {
+            color: var(--primary-accent); font-size: 1rem; width: 32px; height: 32px;
+            background: rgba(52, 211, 153, 0.1); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
 
         footer { text-align: center; padding: 2rem; background-color: rgba(10, 15, 29, 0.95); color: #64748b; font-size: 0.85rem; border-top: 1px solid var(--border-light); }
 
@@ -429,13 +310,13 @@
         @media (max-width: 768px) {
             .hero-text h1 { font-size: 2.2rem; }
             nav ul { gap: 1rem; font-size: 0.8rem; }
-            section { padding: 2.5rem 1.2rem; }
+            section { padding: 3rem 1.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 0% to 100% LOADING SCREEN -->
+    <!-- LOADING SCREEN -->
     <div id="preloader">
         <div class="loader-badge">NJ</div>
         <div class="loader-percentage" id="load-counter">0%</div>
@@ -464,7 +345,9 @@
 
     <section id="hero">
         <div class="container hero-layout">
-            <img src="profile.jpg" alt="Norman Jay V. Olipas Portrait" class="hero-image">
+            <div class="hero-image-wrapper">
+                <img src="profile.jpg" alt="Norman Jay V. Olipas Portrait" class="hero-image">
+            </div>
             <div class="hero-text">
                 <h1>Norman Jay V. Olipas</h1>
                 <h3>Aspiring Network Security Professional</h3>
@@ -484,6 +367,7 @@
 
     <section id="profile" class="bg-alt">
         <div class="container">
+            <div class="section-tag">// 01. Overview</div>
             <h2 class="section-title">Professional Profile</h2>
             <div class="grid-2">
                 <div class="card">
@@ -493,8 +377,8 @@
                 <div class="card">
                     <h3>Areas of Interest in IT</h3>
                     <ul class="clean-list" style="margin-top: 5px;">
-                        <li><i class="fas fa-circle"></i> Network Security</li>
-                        <li><i class="fas fa-circle"></i> Cybersecurity & Data Privacy</li>
+                        <li><i class="fas fa-shield-alt"></i> Network Security</li>
+                        <li><i class="fas fa-lock"></i> Cybersecurity & Data Privacy</li>
                     </ul>
                 </div>
             </div>
@@ -503,22 +387,23 @@
 
     <section id="skills">
         <div class="container">
+            <div class="section-tag">// 02. Expertise</div>
             <h2 class="section-title">Core Competencies</h2>
             <div class="grid-2">
                 <div class="card">
-                    <h3 style="color: var(--accent-light); font-family: 'Inter', sans-serif; margin-bottom: 0.6rem; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Technical Skills</h3>
+                    <h3 style="color: var(--accent-light); font-family: 'Inter', sans-serif; margin-bottom: 0.8rem; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Technical Skills</h3>
                     <ul class="clean-list">
-                        <li><i class="fas fa-circle"></i> HTML / CSS</li>
-                        <li><i class="fas fa-circle"></i> Network Security</li>
+                        <li><i class="fas fa-code"></i> HTML / CSS</li>
+                        <li><i class="fas fa-network-wired"></i> Network Security</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3 style="color: var(--accent-light); font-family: 'Inter', sans-serif; margin-bottom: 0.6rem; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Professional Skills</h3>
+                    <h3 style="color: var(--accent-light); font-family: 'Inter', sans-serif; margin-bottom: 0.8rem; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Professional Skills</h3>
                     <ul class="clean-list">
-                        <li><i class="fas fa-circle"></i> Technical Communication</li>
-                        <li><i class="fas fa-circle"></i> Team Collaboration</li>
-                        <li><i class="fas fa-circle"></i> Problem Solving</li>
-                        <li><i class="fas fa-circle"></i> Adaptability</li>
+                        <li><i class="fas fa-comments"></i> Technical Communication</li>
+                        <li><i class="fas fa-users"></i> Team Collaboration</li>
+                        <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+                        <li><i class="fas fa-sync-alt"></i> Adaptability</li>
                     </ul>
                 </div>
             </div>
@@ -527,6 +412,7 @@
 
     <section id="projects" class="bg-alt">
         <div class="container">
+            <div class="section-tag">// 03. Portfolio</div>
             <h2 class="section-title">Projects & Experience</h2>
             <div class="grid-2">
                 <div class="card">
@@ -575,9 +461,10 @@
         </div>
     </div>
 
-    <!-- Certifications Section (Horizontally Scrolling) -->
+    <!-- Certifications Section -->
     <section id="certifications">
         <div class="container">
+            <div class="section-tag">// 04. Credentials</div>
             <h2 class="section-title">Certifications & Seminars</h2>
             <div class="cert-scroll-container">
                 
@@ -646,14 +533,13 @@
         </div>
     </section>
 
-    <!-- The Popup Modal for GICAST (Paraphrased) -->
+    <!-- The Popup Modal for GICAST -->
     <div id="modal-gicast" class="cert-modal">
         <div class="modal-content">
             <a href="#certifications" class="modal-close">&times;</a>
             <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Gamified Cyber Aptitude & Skills Training (GICAST)</h3>
             <img src="cert_gicast.jpg" alt="GICAST Certificate Full Size" class="modal-img">
             
-            <!-- Official OpenLearn Verification Link with Paraphrased Text -->
             <a href="https://www.open.edu/openlearn/badges/badge.php?hash=7d92d7f245f9cef79de07872460ccb901049aa28" target="_blank" class="verify-btn">
                 Validate Official Credential <i class="fas fa-arrow-right"></i>
             </a>
@@ -666,6 +552,7 @@
 
     <section id="education" class="bg-alt">
         <div class="container">
+            <div class="section-tag">// 05. Background</div>
             <h2 class="section-title">Educational Background</h2>
             <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
                 
@@ -729,6 +616,7 @@
 
     <section id="contact">
         <div class="container">
+            <div class="section-tag">// 06. Reach Out</div>
             <h2 class="section-title">Let's Connect</h2>
             <div class="grid-2">
                 <div class="card">
@@ -738,12 +626,11 @@
                     <div class="contact-info-list">
                         <p>
                             <i class="fas fa-envelope"></i>
-                            <strong>Email:</strong> 
-                            <a href="mailto:olipas.normanjay19@gmail.com" style="color: var(--accent-light); text-decoration: none;">olipas.normanjay19@gmail.com</a>
+                            <span><strong>Email:</strong> <a href="mailto:olipas.normanjay19@gmail.com" style="color: var(--accent-light); text-decoration: none;">olipas.normanjay19@gmail.com</a></span>
                         </p>
                         <p>
                             <i class="fas fa-map-marker-alt"></i>
-                            <strong>Location:</strong> Cauayan City, Philippines
+                            <span><strong>Location:</strong> Cauayan City, Philippines</span>
                         </p>
                     </div>
                 </div>
@@ -773,7 +660,7 @@
             
             let currentPercent = 0;
             let loadInterval = setInterval(function() {
-                currentPercent += Math.floor(Math.random() * 3) + 1; // Slower increments (1 to 3%)
+                currentPercent += Math.floor(Math.random() * 3) + 1;
                 if (currentPercent >= 100) {
                     currentPercent = 100;
                     clearInterval(loadInterval);
