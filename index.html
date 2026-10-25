@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Pastel Dark Blue, White, & Soft Pastel Mint Theme */
+        /* Modern SecOps Pastel Theme (Soft Sage/Mint Green & Slate) */
         :root {
-            --primary-dark: #141c2e;   /* Soft Pastel Dark Blue */
-            --bg-surface: #1e273d;     /* Lighter Pastel Dark Blue Surface */
+            --primary-dark: #0b0f19; 
+            --bg-surface: #111827; 
             --primary-accent: #34d399; /* Soft Pastel Mint/Green */
             --accent-light: #6ee7b7;   /* Lighter Pastel Green Highlight */
             --text-main: #94a3b8; 
-            --text-heading: #f8fafc;   /* Crisp White */
-            --border-light: #2c3954;   /* Dusty Blue-Slate Border */
+            --text-heading: #f8fafc; 
+            --border-light: #1e293b; 
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
@@ -31,7 +31,7 @@
         .container { max-width: 1200px; width: 100%; margin: 0 auto; }
 
         /* Sleek Navigation */
-        nav { background-color: rgba(20, 28, 46, 0.95); backdrop-filter: blur(10px); padding: 0.8rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-light); }
+        nav { background-color: rgba(11, 15, 25, 0.95); backdrop-filter: blur(10px); padding: 0.8rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-light); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; }
         
         /* CIRCULAR NJ LOGO & BRAND */
@@ -40,7 +40,7 @@
             width: 34px;
             height: 34px;
             background: linear-gradient(135deg, var(--primary-accent), #059669);
-            color: #141c2e;
+            color: #0b0f19;
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             font-size: 0.85rem;
@@ -113,7 +113,7 @@
             border-radius: 50%; 
             object-fit: cover; 
             border: 3px solid rgba(52, 211, 153, 0.4); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
             transition: transform 0.3s ease, border-color 0.3s ease; 
         }
         .hero-image:hover { 
@@ -136,23 +136,24 @@
         .hero-text h3 { font-size: 1.1rem; color: var(--accent-light); margin-bottom: 0.8rem; font-weight: 600; }
         .hero-text p { font-size: 0.95rem; margin-bottom: 1.2rem; color: #94a3b8; max-width: 700px; margin-left: auto; margin-right: auto; } 
         
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.6rem 1.4rem; background-color: var(--primary-accent); color: #141c2e; font-family: 'Inter', sans-serif; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; cursor: pointer; border: none; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.6rem 1.4rem; background-color: var(--primary-accent); color: #0b0f19; font-family: 'Inter', sans-serif; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; cursor: pointer; border: none; }
         .btn:hover { background-color: #059669; color: #ffffff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(52, 211, 153, 0.3); }
 
         /* Radiant Boxes for Social Links */
         .social-links { display: flex; gap: 0.6rem; margin-top: 1.5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
         .social-links-title { width: 100%; color: #94a3b8; font-size: 0.85rem; margin-bottom: 0.2rem; }
         .social-links a { 
-            display: inline-flex; align-items: center; gap: 6px; color: #e2e8f0; text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 6px; background: rgba(30, 39, 61, 0.9); border: 1px solid rgba(52, 211, 153, 0.25); transition: all 0.3s ease; 
+            display: inline-flex; align-items: center; gap: 6px; color: #e2e8f0; text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 6px; background: rgba(17, 24, 39, 0.8); border: 1px solid rgba(52, 211, 153, 0.25); transition: all 0.3s ease; 
         }
         .social-links a:hover { color: #ffffff; background-color: rgba(52, 211, 153, 0.12); border-color: var(--accent-light); transform: translateY(-2px); box-shadow: 0 0 12px rgba(52, 211, 153, 0.2); }
         
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.2rem; } 
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; } 
         
         .card { background: var(--primary-dark); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light); transition: border-color 0.3s; display: flex; flex-direction: column; }
         .card:hover { border-color: rgba(52, 211, 153, 0.35); }
         .card h3 { color: var(--text-heading); margin-bottom: 0.4rem; font-size: 1.1rem; letter-spacing: -0.3px; }
-        .bg-alt .card { background: var(--bg-surface); }
+        .bg-alt .card { background: #0f172a; }
 
         .clean-list { list-style-type: none; padding-left: 0; color: #e2e8f0; font-size: 0.9rem; margin-top: 0.2rem; }
         .clean-list li { margin-bottom: 0.5rem; display: flex; align-items: center; }
@@ -160,36 +161,6 @@
 
         .project-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; color: var(--accent-light); text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 6px 12px; border: 1px solid rgba(52, 211, 153, 0.25); border-radius: 4px; transition: all 0.3s ease; align-self: flex-start; }
         .project-link:hover { background-color: rgba(52, 211, 153, 0.1); border-color: var(--primary-accent); color: #ffffff; }
-
-        /* HORIZONTAL SCROLLING CERTIFICATIONS */
-        .cert-scroll-container {
-            display: flex;
-            gap: 1.2rem;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 1rem;
-            margin-top: 0.5rem;
-        }
-        .cert-scroll-container::-webkit-scrollbar {
-            height: 8px;
-        }
-        .cert-scroll-container::-webkit-scrollbar-track {
-            background: var(--bg-surface);
-            border-radius: 4px;
-        }
-        .cert-scroll-container::-webkit-scrollbar-thumb {
-            background: rgba(52, 211, 153, 0.4);
-            border-radius: 4px;
-        }
-        .cert-scroll-container::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-accent);
-        }
-        .cert-scroll-item {
-            min-width: 300px;
-            max-width: 300px;
-            flex: 0 0 auto;
-            scroll-snap-align: start;
-        }
 
         .cert-card { background: var(--bg-surface); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; flex-direction: column; transition: border-color 0.3s; }
         .cert-card:hover { border-color: rgba(52, 211, 153, 0.35); }
@@ -209,7 +180,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(20, 28, 46, 0.9);
+            background-color: rgba(11, 15, 25, 0.9);
             backdrop-filter: blur(8px);
             justify-content: center;
             align-items: center;
@@ -255,7 +226,7 @@
             justify-content: center;
             gap: 8px;
             background-color: var(--primary-accent);
-            color: #141c2e;
+            color: #0b0f19;
             font-weight: 700;
             padding: 0.7rem 1.5rem;
             border-radius: 8px;
@@ -296,7 +267,7 @@
         
         .edu-school-img { width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-light); }
 
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px 12px; margin-bottom: 0.8rem; border: 1px solid var(--border-light); border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.85rem; background-color: var(--primary-dark); color: var(--text-heading); transition: border-color 0.3s; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px 12px; margin-bottom: 0.8rem; border: 1px solid var(--border-light); border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.85rem; background-color: #0b0f19; color: var(--text-heading); transition: border-color 0.3s; }
         .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-accent); }
 
         .contact-info-list p { display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; font-size: 0.85rem; }
@@ -437,13 +408,13 @@
         </div>
     </div>
 
-    <!-- Certifications Section (Horizontally Scrolling) -->
+    <!-- Certifications Section -->
     <section id="certifications">
         <div class="container">
             <h2 class="section-title">Certifications & Seminars</h2>
-            <div class="cert-scroll-container">
+            <div class="grid-3">
                 
-                <div class="cert-card cert-scroll-item">
+                <div class="cert-card">
                     <img src="cert_tesda.jpg" alt="TESDA Certificate" class="cert-image">
                     <div class="timeline-date">August 23, 2026</div>
                     <h3>Microsoft Cybersecurity: Security & Identity</h3>
@@ -451,7 +422,7 @@
                     <a href="cert_tesda.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
-                <div class="cert-card cert-scroll-item">
+                <div class="cert-card">
                     <img src="cert_ai_security.jpg" alt="AI Security Summit" class="cert-image">
                     <div class="timeline-date">August 19, 2026</div>
                     <h3>AI Security Summit</h3>
@@ -459,7 +430,7 @@
                     <a href="cert_ai_security.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
-                <div class="cert-card cert-scroll-item">
+                <div class="cert-card">
                     <img src="cert_dict.jpg" alt="DICT Certificate" class="cert-image">
                     <div class="timeline-date">August 13, 2026</div>
                     <h3>Don’t Get Hacked: Secure your Digital Life</h3>
@@ -467,7 +438,7 @@
                     <a href="cert_dict.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
-                <div class="cert-card cert-scroll-item">
+                <div class="cert-card">
                     <img src="cert_threat_management.jpg" alt="Cyber Threat Management" class="cert-image">
                     <div class="timeline-date">January 30, 2026</div>
                     <h3>Cyber Threat Management</h3>
@@ -475,7 +446,7 @@
                     <a href="cert_threat_management.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
-                <div class="cert-card cert-scroll-item">
+                <div class="cert-card">
                     <img src="cert_intro_cyber.jpg" alt="Introduction to Cybersecurity" class="cert-image">
                     <div class="timeline-date">January 29, 2026</div>
                     <h3>Introduction to Cybersecurity</h3>
@@ -484,7 +455,7 @@
                 </div>
 
                 <!-- GICAST Card with Interactive Verification Modal -->
-                <div class="cert-card cert-scroll-item">
+                <div class="cert-card">
                     <img src="cert_gicast.jpg" alt="GICAST Certificate" class="cert-image">
                     <div class="timeline-date">May 19, 2025</div>
                     <h3>Gamified Cyber Aptitude & Skills Training</h3>
