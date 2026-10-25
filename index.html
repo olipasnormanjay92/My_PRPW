@@ -138,7 +138,7 @@
         section { padding: 3.8rem 5%; } 
         .bg-alt { background-color: rgba(30, 41, 59, 0.4); backdrop-filter: blur(8px); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); } 
         
-        /* DESIGN TOUCH: Micro Section Tracker Badges & Enhanced Titles */
+        /* Micro Section Tracker Badges & Enhanced Titles */
         .section-tag {
             text-align: center;
             font-family: 'Inter', sans-serif;
@@ -206,7 +206,7 @@
         
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; } 
         
-        /* DESIGN TOUCH: Elevated Glassmorphism Cards with Mint Glow on Hover */
+        /* Elevated Glassmorphism Cards with Mint Glow on Hover */
         .card { 
             background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(10px); 
             padding: 1.6rem; border-radius: 10px; border: 1px solid var(--border-light); 
@@ -222,9 +222,22 @@
         .card h3 { color: var(--text-heading); margin-bottom: 0.6rem; font-size: 1.1rem; letter-spacing: -0.3px; }
         .bg-alt .card { background: rgba(30, 41, 59, 0.7); }
 
+        /* Precision-Aligned List Layout */
         .clean-list { list-style-type: none; padding-left: 0; color: #e2e8f0; font-size: 0.9rem; margin-top: 0.4rem; }
-        .clean-list li { margin-bottom: 0.7rem; display: flex; align-items: center; }
-        .clean-list li i { color: var(--primary-accent); margin-right: 12px; font-size: 0.5rem; background: rgba(52, 211, 153, 0.15); padding: 6px; border-radius: 50%; }
+        .clean-list li { margin-bottom: 0.8rem; display: flex; align-items: center; }
+        .clean-list li i { 
+            color: var(--primary-accent); 
+            font-size: 0.75rem; 
+            width: 28px; 
+            height: 28px; 
+            background: rgba(52, 211, 153, 0.12); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 12px; 
+            flex-shrink: 0; 
+        }
 
         .project-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; color: var(--accent-light); text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 6px 12px; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 4px; transition: all 0.3s ease; align-self: flex-start; }
         .project-link:hover { background-color: rgba(52, 211, 153, 0.15); border-color: var(--primary-accent); color: #ffffff; }
