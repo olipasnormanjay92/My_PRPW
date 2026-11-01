@@ -282,16 +282,13 @@
         .project-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; color: var(--accent-light); text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 6px 12px; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; transition: all 0.3s ease; align-self: flex-start; }
         .project-link:hover { background-color: rgba(56, 189, 248, 0.15); border-color: var(--accent-light); color: #ffffff; }
 
-        /* HORIZONTAL SCROLLING CERTIFICATIONS */
-        .cert-scroll-container {
-            display: flex; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch; padding-bottom: 1rem; margin-top: 0.5rem;
+        /* CERTIFICATIONS GRID (3 to 4 items per row) */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 0.5rem;
         }
-        .cert-scroll-container::-webkit-scrollbar { height: 6px; }
-        .cert-scroll-container::-webkit-scrollbar-track { background: rgba(9, 13, 22, 0.5); border-radius: 4px; }
-        .cert-scroll-container::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.4); border-radius: 4px; }
-        .cert-scroll-container::-webkit-scrollbar-thumb:hover { background: var(--primary-accent); }
-        .cert-scroll-item { min-width: 280px; max-width: 320px; width: 85vw; flex: 0 0 auto; scroll-snap-align: start; }
 
         .cert-card { background: rgba(30, 41, 59, 0.75); backdrop-filter: blur(8px); padding: 1.2rem; border-radius: 10px; border: 1px solid var(--border-light); display: flex; flex-direction: column; transition: all 0.3s ease; height: 100%; }
         .cert-card:hover { border-color: rgba(16, 185, 129, 0.5); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
@@ -513,72 +510,60 @@
         </div>
     </div>
 
-    <!-- Certifications Section -->
+    <!-- Certifications Section (Grid Layout: 3-4 items per row) -->
     <section id="certifications">
         <div class="container">
             <div class="section-tag">// 04. Credentials</div>
             <h2 class="section-title">Certifications and Seminars</h2>
-            <div class="cert-scroll-container">
+            <div class="cert-grid">
                 
-                <div class="cert-scroll-item">
-                    <div class="cert-card">
-                        <img src="cert_tesda.jpg" alt="Microsoft Cybersecurity Certificate" class="cert-image">
-                        <div class="timeline-date">August 23, 2026</div>
-                        <h3>Microsoft Cybersecurity: Security & Identity</h3>
-                        <h4>Technical Education and Skills Development Authority</h4>
-                        <a href="cert_tesda.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
-                    </div>
+                <div class="cert-card">
+                    <img src="cert_tesda.jpg" alt="Microsoft Cybersecurity Certificate" class="cert-image">
+                    <div class="timeline-date">August 23, 2026</div>
+                    <h3>Microsoft Cybersecurity: Security & Identity</h3>
+                    <h4>Technical Education and Skills Development Authority</h4>
+                    <a href="cert_tesda.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
-                <div class="cert-scroll-item">
-                    <div class="cert-card">
-                        <img src="cert_ai_security.jpg" alt="AI Security Summit Certificate" class="cert-image">
-                        <div class="timeline-date">August 19, 2026</div>
-                        <h3>Artificial Intelligence Security Summit</h3>
-                        <h4>Cloud Security Alliance</h4>
-                        <a href="cert_ai_security.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
-                    </div>
+                <div class="cert-card">
+                    <img src="cert_ai_security.jpg" alt="AI Security Summit Certificate" class="cert-image">
+                    <div class="timeline-date">August 19, 2026</div>
+                    <h3>Artificial Intelligence Security Summit</h3>
+                    <h4>Cloud Security Alliance</h4>
+                    <a href="cert_ai_security.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
-                <div class="cert-scroll-item">
-                    <div class="cert-card">
-                        <img src="cert_dict.jpg" alt="DICT Certificate" class="cert-image">
-                        <div class="timeline-date">August 13, 2026</div>
-                        <h3>Don’t Get Hacked: Secure your Digital Life</h3>
-                        <h4>Department of Information and Communications Technology Region V</h4>
-                        <a href="cert_dict.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
-                    </div>
+                <div class="cert-card">
+                    <img src="cert_dict.jpg" alt="DICT Certificate" class="cert-image">
+                    <div class="timeline-date">August 13, 2026</div>
+                    <h3>Don’t Get Hacked: Secure your Digital Life</h3>
+                    <h4>Department of Information and Communications Technology Region V</h4>
+                    <a href="cert_dict.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
-                <div class="cert-scroll-item">
-                    <div class="cert-card">
-                        <img src="cert_threat_management.jpg" alt="Cyber Threat Management Certificate" class="cert-image">
-                        <div class="timeline-date">January 30, 2026</div>
-                        <h3>Cyber Threat Management</h3>
-                        <h4>Department of Information and Communications Technology - International Telecommunication Union Digital Transformation Center Initiative / Cisco Networking Academy</h4>
-                        <a href="cert_threat_management.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
-                    </div>
+                <div class="cert-card">
+                    <img src="cert_threat_management.jpg" alt="Cyber Threat Management Certificate" class="cert-image">
+                    <div class="timeline-date">January 30, 2026</div>
+                    <h3>Cyber Threat Management</h3>
+                    <h4>Department of Information and Communications Technology - International Telecommunication Union Digital Transformation Center Initiative / Cisco Networking Academy</h4>
+                    <a href="cert_threat_management.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
-                <div class="cert-scroll-item">
-                    <div class="cert-card">
-                        <img src="cert_intro_cyber.jpg" alt="Introduction to Cybersecurity Certificate" class="cert-image">
-                        <div class="timeline-date">January 29, 2026</div>
-                        <h3>Introduction to Cybersecurity</h3>
-                        <h4>Department of Information and Communications Technology - International Telecommunication Union Digital Transformation Center Initiative / Cisco Networking Academy</h4>
-                        <a href="cert_intro_cyber.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
-                    </div>
+                <div class="cert-card">
+                    <img src="cert_intro_cyber.jpg" alt="Introduction to Cybersecurity Certificate" class="cert-image">
+                    <div class="timeline-date">January 29, 2026</div>
+                    <h3>Introduction to Cybersecurity</h3>
+                    <h4>Department of Information and Communications Technology - International Telecommunication Union Digital Transformation Center Initiative / Cisco Networking Academy</h4>
+                    <a href="cert_intro_cyber.jpg" target="_blank" class="cert-link"><i class="fas fa-file-image"></i> View Full Size</a>
                 </div>
 
                 <!-- GICAST Card with Interactive Verification Modal -->
-                <div class="cert-scroll-item">
-                    <div class="cert-card">
-                        <img src="cert_gicast.jpg" alt="GICAST Certificate" class="cert-image">
-                        <div class="timeline-date">May 19, 2025</div>
-                        <h3>Gamified Cyber Aptitude and Skills Training</h3>
-                        <h4>The Open University</h4>
-                        <a href="#modal-gicast" class="cert-link"><i class="fas fa-search-plus"></i> Quick View & Verify</a>
-                    </div>
+                <div class="cert-card">
+                    <img src="cert_gicast.jpg" alt="GICAST Certificate" class="cert-image">
+                    <div class="timeline-date">May 19, 2025</div>
+                    <h3>Gamified Cyber Aptitude and Skills Training</h3>
+                    <h4>The Open University</h4>
+                    <a href="#modal-gicast" class="cert-link"><i class="fas fa-search-plus"></i> Quick View & Verify</a>
                 </div>
 
             </div>
@@ -682,7 +667,7 @@
                         </p>
                         <p>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span><strong>Location:</strong> Cauayan City, Philippines</span>
+                            <span><strong>Location:</strong> <a href="https://maps.google.com/?q=Bugallon,+Cauayan+City,+Isabela" target="_blank" style="color: var(--accent-light); text-decoration: none;">Bugallon, Cauayan City, Isabela</a></span>
                         </p>
                     </div>
                 </div>
