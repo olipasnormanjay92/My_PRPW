@@ -103,9 +103,9 @@
         .loader-bar-fill { width: 0%; height: 100%; background: linear-gradient(90deg, var(--accent-light), var(--primary-accent)); border-radius: 4px; transition: width 0.1s linear; }
         .loader-text { font-size: 0.8rem; color: var(--text-main); margin-top: 0.6rem; letter-spacing: 0.5px; text-transform: uppercase; }
 
-        /* Sleek Glassmorphism Navigation */
-        nav { background-color: rgba(9, 13, 22, 0.85); backdrop-filter: blur(12px); padding: 0.8rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-light); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; }
+        /* Minimalist Header Branding */
+        header { background-color: rgba(9, 13, 22, 0.85); backdrop-filter: blur(12px); padding: 0.8rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-light); }
+        .header-container { display: flex; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; }
         
         .logo-wrapper { display: flex; align-items: center; gap: 10px; cursor: default; }
         .logo-badge {
@@ -115,25 +115,13 @@
             display: flex; align-items: center; justify-content: center;
             border-radius: 50%; border: 2px solid rgba(56, 189, 248, 0.4);
             box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
-            transition: transform 0.3s ease, border-color 0.3s ease;
         }
-        .logo-wrapper:hover .logo-badge { transform: scale(1.05); border-color: var(--primary-accent); }
         .logo { 
             font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; 
             background: linear-gradient(90deg, #ffffff, var(--accent-light)); 
             -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; 
-            filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.3)); transition: filter 0.3s ease;
+            filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.3));
         }
-        .logo-wrapper:hover .logo { filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.6)); }
-
-        nav ul { list-style: none; display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: center; }
-        nav a { color: #94a3b8; text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: color 0.3s ease; position: relative; padding-bottom: 2px; }
-        nav a:hover { color: var(--accent-light); }
-        nav a::after {
-            content: ''; position: absolute; bottom: -2px; left: 0; width: 0%; height: 2px;
-            background-color: var(--primary-accent); transition: width 0.3s ease; border-radius: 2px;
-        }
-        nav a:hover::after { width: 100%; }
 
         section { padding: 3.8rem 5%; } 
         .bg-alt { background-color: rgba(30, 41, 59, 0.35); backdrop-filter: blur(8px); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); } 
@@ -359,7 +347,6 @@
         /* Mobile Responsiveness Improvements */
         @media (max-width: 768px) {
             .hero-text h1 { font-size: 2.2rem; }
-            nav ul { gap: 1rem; font-size: 0.8rem; }
             section { padding: 3rem 1.2rem; }
         }
     </style>
@@ -376,22 +363,14 @@
         <div class="loader-text">Loading Portfolio...</div>
     </div>
 
-    <nav>
-        <div class="nav-container">
+    <header>
+        <div class="header-container">
             <div class="logo-wrapper">
                 <div class="logo-badge">NJ</div>
                 <div class="logo">Welcome!</div>
             </div>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#education">Education</a></li>
-            </ul>
         </div>
-    </nav>
+    </header>
 
     <section id="hero">
         <div class="container hero-layout">
