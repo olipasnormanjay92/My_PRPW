@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Purple-Blue, Sky Blue, Soft Purple Surfaces & Kryptonite Green Theme */
+        /* Deep Purple-Blue Base with Brighter Ocean Blue & Soft Purple Highlights */
         :root {
             --primary-dark: #120f24;   /* Deep Purple-Blue Base */
-            --bg-surface: #261f42;     /* Soft Purple Card Surface (Updated from Grey) */
+            --bg-surface: #261f42;     /* Soft Purple Card Surface */
             --primary-accent: #34d399; /* Soft Kryptonite Green Highlight */
             --accent-light: #38bdf8;   /* Sky Blue Highlight */
             --text-main: #b4aee0;      /* Soft Lavender-Slate Readable Text */
@@ -33,9 +33,9 @@
             color: var(--text-main); 
             background-color: var(--primary-dark); 
             background-image: 
-                radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.28) 0%, transparent 55%), /* Prominent Sky Blue Background Highlight */
-                radial-gradient(circle at 85% 85%, rgba(56, 189, 248, 0.15) 0%, transparent 45%), /* Secondary Sky Blue Corner Glow */
-                radial-gradient(circle at 15% 75%, rgba(52, 211, 153, 0.08) 0%, transparent 55%), /* Soft Kryptonite Accent */
+                radial-gradient(circle at 30% -10%, rgba(139, 92, 246, 0.25) 0%, transparent 50%),   /* Soft Purple Background Highlight */
+                radial-gradient(circle at 75% 25%, rgba(14, 165, 233, 0.45) 0%, transparent 60%),  /* Brighter & Luminous Ocean Blue Highlight */
+                radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.15) 0%, transparent 45%),   /* Sky Blue Lower Accent */
                 linear-gradient(135deg, #120f24 0%, #1a1530 50%, #0a0814 100%);
             background-attachment: fixed;
             line-height: 1.5; 
@@ -43,20 +43,20 @@
             position: relative;
         }
 
-        /* Ambient Sky Blue Glow Orbs */
+        /* Ambient Dual-Tone Glow Orbs */
         body::before {
             content: '';
             position: fixed;
-            top: -120px;
-            left: 25%;
-            width: 550px;
-            height: 550px;
-            background: rgba(56, 189, 248, 0.12);
-            filter: blur(130px);
+            top: -100px;
+            left: 20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(139, 92, 246, 0.12); /* Soft Purple Ambient Bloom */
+            filter: blur(140px);
             border-radius: 50%;
             z-index: -1;
             pointer-events: none;
-            animation: float-orb 10s ease-in-out infinite alternate;
+            animation: float-orb 12s ease-in-out infinite alternate;
         }
 
         @keyframes float-orb {
