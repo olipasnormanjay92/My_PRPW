@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Purple-Blue & Sky Blue Highlight Atmosphere Theme */
+        /* Purple-Blue, Sky Blue, Soft Purple Surfaces & Kryptonite Green Theme */
         :root {
             --primary-dark: #120f24;   /* Deep Purple-Blue Base */
-            --bg-surface: #1d1933;     /* Soft Grey-Purple Card Surface */
+            --bg-surface: #261f42;     /* Soft Purple Card Surface (Updated from Grey) */
             --primary-accent: #34d399; /* Soft Kryptonite Green Highlight */
             --accent-light: #38bdf8;   /* Sky Blue Highlight */
-            --text-main: #94a3b8;      /* Soft Slate Gray Readable Text */
+            --text-main: #b4aee0;      /* Soft Lavender-Slate Readable Text */
             --text-heading: #ffffff;   /* Crisp White Heading */
-            --border-light: #2d264a;   /* Clean Structural Border */
+            --border-light: #382e5e;   /* Clean Structural Purple Border */
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
@@ -33,8 +33,8 @@
             color: var(--text-main); 
             background-color: var(--primary-dark); 
             background-image: 
-                radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.25) 0%, transparent 55%), /* Prominent Sky Blue Background Highlight */
-                radial-gradient(circle at 85% 85%, rgba(56, 189, 248, 0.12) 0%, transparent 45%), /* Secondary Sky Blue Corner Glow */
+                radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.28) 0%, transparent 55%), /* Prominent Sky Blue Background Highlight */
+                radial-gradient(circle at 85% 85%, rgba(56, 189, 248, 0.15) 0%, transparent 45%), /* Secondary Sky Blue Corner Glow */
                 radial-gradient(circle at 15% 75%, rgba(52, 211, 153, 0.08) 0%, transparent 55%), /* Soft Kryptonite Accent */
                 linear-gradient(135deg, #120f24 0%, #1a1530 50%, #0a0814 100%);
             background-attachment: fixed;
@@ -43,7 +43,7 @@
             position: relative;
         }
 
-        /* Ambient Sky Blue & Kryptonite Glow Orbs */
+        /* Ambient Sky Blue Glow Orbs */
         body::before {
             content: '';
             position: fixed;
@@ -51,7 +51,7 @@
             left: 25%;
             width: 550px;
             height: 550px;
-            background: rgba(56, 189, 248, 0.12); /* Intensified Sky Blue Atmospheric Bloom */
+            background: rgba(56, 189, 248, 0.12);
             filter: blur(130px);
             border-radius: 50%;
             z-index: -1;
@@ -125,7 +125,7 @@
         }
 
         section { padding: 3.8rem 5%; } 
-        .bg-alt { background-color: rgba(29, 25, 51, 0.5); backdrop-filter: blur(8px); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); } 
+        .bg-alt { background-color: rgba(35, 28, 61, 0.5); backdrop-filter: blur(8px); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); } 
         
         /* Micro Section Tracker Badges & Enhanced Titles */
         .section-tag {
@@ -227,31 +227,31 @@
         .social-links { display: flex; gap: 0.6rem; margin-top: 1.8rem; align-items: center; justify-content: center; flex-wrap: wrap; }
         .social-links-title { width: 100%; color: var(--text-main); font-size: 0.85rem; margin-bottom: 0.3rem; }
         .social-links a { 
-            display: inline-flex; align-items: center; gap: 6px; color: #cbd5e1; text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 6px; background: var(--bg-surface); backdrop-filter: blur(5px); border: 1px solid rgba(56, 189, 248, 0.3); transition: all 0.3s ease; 
+            display: inline-flex; align-items: center; gap: 6px; color: #d4d0f0; text-decoration: none; font-weight: 500; font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 6px; background: var(--bg-surface); backdrop-filter: blur(5px); border: 1px solid rgba(56, 189, 248, 0.3); transition: all 0.3s ease; 
         }
         .social-links a:hover { color: #ffffff; background-color: rgba(56, 189, 248, 0.2); border-color: var(--accent-light); transform: translateY(-2px); box-shadow: 0 0 15px rgba(56, 189, 248, 0.3); }
         
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; } 
         
-        /* Elevated Soft Grey Cards */
+        /* Elevated Soft Purple Cards */
         .card { 
             background: var(--bg-surface); backdrop-filter: blur(10px); 
             padding: 1.6rem; border-radius: 10px; border: 1px solid var(--border-light); 
             transition: all 0.3s ease; display: flex; flex-direction: column; 
             position: relative; overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
         }
         .card::before {
             content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%;
             background: linear-gradient(to bottom, var(--accent-light), var(--primary-accent)); opacity: 0.6; transition: opacity 0.3s ease;
         }
-        .card:hover { border-color: rgba(56, 189, 248, 0.6); box-shadow: 0 10px 30px rgba(52, 211, 153, 0.15); transform: translateY(-3px); }
+        .card:hover { border-color: rgba(56, 189, 248, 0.6); box-shadow: 0 10px 30px rgba(52, 211, 153, 0.2); transform: translateY(-3px); }
         .card:hover::before { opacity: 1; }
         .card h3 { color: var(--text-heading); margin-bottom: 0.6rem; font-size: 1.1rem; letter-spacing: -0.3px; }
-        .bg-alt .card { background: #262142; }
+        .bg-alt .card { background: #322854; }
 
         /* Precision-Aligned List Layout */
-        .clean-list { list-style-type: none; padding-left: 0; color: #cbd5e1; font-size: 0.9rem; margin-top: 0.4rem; }
+        .clean-list { list-style-type: none; padding-left: 0; color: #d4d0f0; font-size: 0.9rem; margin-top: 0.4rem; }
         .clean-list li { margin-bottom: 0.8rem; display: flex; align-items: center; }
         .clean-list li i { 
             color: var(--accent-light); 
@@ -295,7 +295,7 @@
         }
         .cert-modal:target { display: flex; }
         .modal-content {
-            background: rgba(29, 25, 51, 0.95); backdrop-filter: blur(15px);
+            background: rgba(38, 31, 66, 0.95); backdrop-filter: blur(15px);
             border: 1px solid rgba(56, 189, 248, 0.4); padding: 25px; border-radius: 12px;
             max-width: 600px; width: 100%; text-align: center; position: relative;
             box-shadow: 0 20px 40px rgba(0,0,0,0.6);
@@ -342,7 +342,7 @@
             display: flex; align-items: center; justify-content: center; flex-shrink: 0;
         }
 
-        footer { text-align: center; padding: 2rem; background-color: #0a0814; color: #64748b; font-size: 0.85rem; border-top: 1px solid var(--border-light); }
+        footer { text-align: center; padding: 2rem; background-color: #0a0814; color: #8e85c2; font-size: 0.85rem; border-top: 1px solid var(--border-light); }
 
         /* Mobile Responsiveness Improvements */
         @media (max-width: 768px) {
@@ -400,7 +400,7 @@
             <div class="grid-2">
                 <div class="card">
                     <h3>Career Objectives</h3>
-                    <p style="color: #cbd5e1; font-size: 0.85rem;">To secure a dynamic role in the Information Technology industry where I can leverage my foundational skills in Network Security, while continuously learning and contributing to secure, efficient technological environments.</p>
+                    <p style="color: #d4d0f0; font-size: 0.85rem;">To secure a dynamic role in the Information Technology industry where I can leverage my foundational skills in Network Security, while continuously learning and contributing to secure, efficient technological environments.</p>
                 </div>
                 <div class="card">
                     <h3>Areas of Interest in Information Technology</h3>
@@ -455,7 +455,7 @@
                     </div>
                     <h3>PDAOLink System</h3>
                     <p style="color: var(--primary-accent); font-weight: 500; font-size: 0.8rem; margin-bottom: 0.4rem;">Role: Technical Writer | Capstone Project</p>
-                    <p style="color: #cbd5e1; font-size: 0.85rem; flex-grow: 1;">A Web Application and Automated Authentication for Person with Disability Registration.</p>
+                    <p style="color: #d4d0f0; font-size: 0.85rem; flex-grow: 1;">A Web Application and Automated Authentication for Person with Disability Registration.</p>
                     <a href="https://pdaolink.onrender.com/" target="_blank" class="project-link"><i class="fas fa-globe"></i> View Live Project</a>
                 </div>
 
@@ -465,7 +465,7 @@
                     
                     <p style="color: var(--text-heading); font-size: 0.85rem;"><strong>Universal Leaf Philippines</strong></p>
                     
-                    <p style="color: #cbd5e1; font-size: 0.85rem; margin-top: 6px;">Target internship placement for practical training in information technology operations and infrastructure security.</p>
+                    <p style="color: #d4d0f0; font-size: 0.85rem; margin-top: 6px;">Target internship placement for practical training in information technology operations and infrastructure security.</p>
                 </div>
             </div>
         </div>
@@ -568,7 +568,7 @@
                 Validate Official Credential <i class="fas fa-arrow-right"></i>
             </a>
             
-            <p style="font-size: 0.8rem; color: #94a3b8;">
+            <p style="font-size: 0.8rem; color: #b4aee0;">
                 Select this button to confirm the authenticity of this achievement through the issuing institution's database, or scan the QR code featured on the credential document.
             </p>
         </div>
@@ -587,8 +587,8 @@
                         <div style="color: var(--accent-light); font-weight: 600; font-size: 0.8rem; text-transform: uppercase;">Class of 2027</div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.6rem;">
-                        <h4 style="color: #cbd5e1; font-size: 0.9rem; margin: 0; font-weight: 500; font-family: 'Inter', sans-serif;">Isabela State University – Cauayan Campus</h4>
-                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 0;">San Fermin, Cauayan City, Isabela</p>
+                        <h4 style="color: #d4d0f0; font-size: 0.9rem; margin: 0; font-weight: 500; font-family: 'Inter', sans-serif;">Isabela State University – Cauayan Campus</h4>
+                        <p style="color: #b4aee0; font-size: 0.8rem; margin: 0;">San Fermin, Cauayan City, Isabela</p>
                     </div>
                     
                     <div class="edu-toggle-hint"><i class="fas fa-chevron-down"></i> Click to view campus</div>
@@ -605,8 +605,8 @@
                         <div style="color: var(--accent-light); font-weight: 600; font-size: 0.8rem; text-transform: uppercase;">Graduated 2023</div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-                        <h4 style="color: #cbd5e1; font-size: 0.9rem; margin: 0; font-weight: 500; font-family: 'Inter', sans-serif;">Cauayan City Science and Technology High School</h4>
-                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 0;">Villa Luna, Cauayan City, Isabela</p>
+                        <h4 style="color: #d4d0f0; font-size: 0.9rem; margin: 0; font-weight: 500; font-family: 'Inter', sans-serif;">Cauayan City Science and Technology High School</h4>
+                        <p style="color: #b4aee0; font-size: 0.8rem; margin: 0;">Villa Luna, Cauayan City, Isabela</p>
                     </div>
                     
                     <div class="edu-toggle-hint"><i class="fas fa-chevron-down"></i> Click to view school</div>
@@ -623,8 +623,8 @@
                         <div style="color: var(--accent-light); font-weight: 600; font-size: 0.8rem; text-transform: uppercase;">Graduated 2012</div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-                        <h4 style="color: #cbd5e1; font-size: 0.9rem; margin: 0; font-weight: 500; font-family: 'Inter', sans-serif;">Cutog Grande Elementary School</h4>
-                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 0;">Cutog Grande, Reina Mercedes, Isabela</p>
+                        <h4 style="color: #d4d0f0; font-size: 0.9rem; margin: 0; font-weight: 500; font-family: 'Inter', sans-serif;">Cutog Grande Elementary School</h4>
+                        <p style="color: #b4aee0; font-size: 0.8rem; margin: 0;">Cutog Grande, Reina Mercedes, Isabela</p>
                     </div>
                     
                     <div class="edu-toggle-hint"><i class="fas fa-chevron-down"></i> Click to view school</div>
@@ -645,7 +645,7 @@
             <div class="grid-2">
                 <div class="card">
                     <h3>Contact Information</h3>
-                    <p style="margin-top: 0.5rem; margin-bottom: 1.2rem; font-size: 0.85rem; color: #cbd5e1;">Feel free to reach out to me for professional inquiries, project collaborations, or opportunities.</p>
+                    <p style="margin-top: 0.5rem; margin-bottom: 1.2rem; font-size: 0.85rem; color: #d4d0f0;">Feel free to reach out to me for professional inquiries, project collaborations, or opportunities.</p>
                     
                     <div class="contact-info-list">
                         <p>
