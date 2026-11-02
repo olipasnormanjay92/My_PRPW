@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Deep Purple-Blue Base with Brighter Ocean Blue & Soft Purple Highlights */
+        /* Purple-Blue Base with Triple-Tone Background Atmosphere (Soft Purple, Ocean Blue & Emerald) */
         :root {
             --primary-dark: #120f24;   /* Deep Purple-Blue Base */
             --bg-surface: #261f42;     /* Soft Purple Card Surface */
@@ -33,26 +33,26 @@
             color: var(--text-main); 
             background-color: var(--primary-dark); 
             background-image: 
-                radial-gradient(circle at 30% -10%, rgba(139, 92, 246, 0.25) 0%, transparent 50%),   /* Soft Purple Background Highlight */
-                radial-gradient(circle at 75% 25%, rgba(14, 165, 233, 0.45) 0%, transparent 60%),  /* Brighter & Luminous Ocean Blue Highlight */
-                radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.15) 0%, transparent 45%),   /* Sky Blue Lower Accent */
-                linear-gradient(135deg, #120f24 0%, #1a1530 50%, #0a0814 100%);
+                radial-gradient(circle at 75% 25%, rgba(14, 165, 233, 0.4) 0%, transparent 60%),    /* Balanced Ocean Blue Highlight */
+                radial-gradient(circle at 20% 15%, rgba(139, 92, 246, 0.35) 0%, transparent 55%),  /* Soft Purple Highlight */
+                radial-gradient(circle at 50% 80%, rgba(52, 211, 153, 0.15) 0%, transparent 50%),  /* Soft Emerald (Kryptonite Green) Atmosphere */
+                linear-gradient(135deg, #151128 0%, #1c1638 50%, #0d0a1b 100%);
             background-attachment: fixed;
             line-height: 1.5; 
             overflow-x: hidden; 
             position: relative;
         }
 
-        /* Ambient Dual-Tone Glow Orbs */
+        /* Ambient Triple-Tone Glow Orbs */
         body::before {
             content: '';
             position: fixed;
-            top: -100px;
-            left: 20%;
+            top: -50px;
+            right: 15%;
             width: 600px;
             height: 600px;
-            background: rgba(139, 92, 246, 0.12); /* Soft Purple Ambient Bloom */
-            filter: blur(140px);
+            background: rgba(14, 165, 233, 0.12); 
+            filter: blur(150px);
             border-radius: 50%;
             z-index: -1;
             pointer-events: none;
@@ -95,7 +95,7 @@
         }
         @keyframes pulse-glow {
             0% { transform: scale(1); box-shadow: 0 0 10px rgba(56, 189, 248, 0.25); }
-            100% { transform: scale(1.08); box-shadow: 0 0 30px rgba(56, 189, 248, 0.5); }
+            100% { transform: scale(1.08); box-shadow: 0 0 30px rgba(52, 211, 153, 0.5); }
         }
         .loader-percentage {
             font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--text-heading); margin-bottom: 0.8rem; letter-spacing: 1px;
@@ -127,7 +127,7 @@
         section { padding: 3.8rem 5%; } 
         .bg-alt { background-color: rgba(35, 28, 61, 0.5); backdrop-filter: blur(8px); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); } 
         
-        /* Micro Section Tracker Badges & Enhanced Titles */
+        /* Micro Section Tracker Badges & Enhanced Titles with Soft Emerald Accent */
         .section-tag {
             text-align: center;
             font-family: 'Inter', sans-serif;
@@ -152,7 +152,10 @@
         }
         h2.section-title::after {
             content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 40px; height: 3px; background: linear-gradient(90deg, var(--accent-light), var(--primary-accent)); border-radius: 2px;
+            width: 50px; height: 2px; 
+            background: linear-gradient(90deg, var(--accent-light), var(--primary-accent)); /* Sky blue to Soft Emerald */
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(52, 211, 153, 0.4); /* Subtle emerald glow */
         }
 
         /* HERO SECTION */
@@ -383,6 +386,11 @@
                 
                 <a href="resume.pdf" class="btn" download><i class="fas fa-download"></i> Download Resume (PDF)</a>
                 
+                <!-- Standalone Decorative Divider Line -->
+                <div style="width: 100%; display: flex; justify-content: center; margin: 1.5rem 0;">
+                    <div style="width: 80px; height: 2px; background: linear-gradient(90deg, transparent, #34d399, transparent); opacity: 0.7;"></div>
+                </div>
+
                 <div class="social-links">
                     <div class="social-links-title">Connect with me:</div>
                     <a href="https://www.facebook.com/share/1ADJTePhte/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
