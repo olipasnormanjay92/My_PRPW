@@ -258,23 +258,34 @@
 
         .cert-modal {
             display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(7, 14, 27, 0.9); backdrop-filter: blur(12px);
+            background-color: rgba(7, 14, 27, 0.92); backdrop-filter: blur(12px);
             justify-content: center; align-items: center; padding: 20px;
         }
         .cert-modal:target { display: flex; }
         .modal-content {
-            background: rgba(16, 28, 51, 0.95); backdrop-filter: blur(15px);
+            background: rgba(16, 28, 51, 0.98); backdrop-filter: blur(15px);
             border: 1px solid rgba(56, 189, 248, 0.5); padding: 25px; border-radius: 12px;
-            max-width: 600px; width: 100%; text-align: center; position: relative;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+            max-width: 900px; width: 100%; text-align: center; position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.9); max-height: 95vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
         }
-        .modal-close { position: absolute; top: 15px; right: 20px; color: var(--text-main); font-size: 1.5rem; text-decoration: none; font-weight: bold; }
+        .modal-close { position: absolute; top: 15px; right: 20px; color: var(--text-main); font-size: 1.5rem; text-decoration: none; font-weight: bold; z-index: 10; }
         .modal-close:hover { color: var(--accent-light); }
-        .modal-img { width: 100%; max-height: 350px; object-fit: contain; border-radius: 6px; border: 1px solid var(--border-light); margin-bottom: 1rem; }
+        
+        /* Adjusted Certificate Image Size in Modal */
+        .modal-img { 
+            width: auto; 
+            max-width: 100%; 
+            max-height: 75vh; 
+            object-fit: contain; 
+            border-radius: 6px; 
+            border: 1px solid var(--border-light); 
+            margin-bottom: 1rem; 
+        }
+
         .verify-btn {
             display: inline-flex; align-items: center; justify-content: center; gap: 8px;
             background: linear-gradient(135deg, var(--accent-light), var(--primary-accent)); color: #070e1b; font-weight: 700;
-            padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; margin-bottom: 1rem; transition: all 0.3s ease;
+            padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; margin-bottom: 0.6rem; transition: all 0.3s ease;
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
         }
         .verify-btn:hover { background: #0284c7; color: #ffffff; box-shadow: 0 5px 20px rgba(56, 189, 248, 0.6); }
@@ -559,14 +570,14 @@
     <div id="modal-threat-mgmt" class="cert-modal">
         <div class="modal-content">
             <a href="#certifications" class="modal-close">&times;</a>
-            <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Cyber Threat Management</h3>
+            <h3 style="color: var(--text-heading); margin-bottom: 0.8rem; font-size: 1.1rem;">Cyber Threat Management</h3>
             <img src="cert_threat_management.jpg" alt="Cyber Threat Management Certificate Full Size" class="modal-img">
             
             <a href="https://www.credly.com/badges/48eb7bc4-a2a5-44c5-9d24-bdf35f81e7fd" target="_blank" class="verify-btn">
                 Validate Official Credential <i class="fas fa-arrow-right"></i>
             </a>
             
-            <p style="font-size: 0.8rem; color: #bae6fd;">
+            <p style="font-size: 0.75rem; color: #bae6fd;">
                 Select this button to confirm the authenticity of this achievement through the issuing institution's database.
             </p>
         </div>
@@ -576,14 +587,14 @@
     <div id="modal-intro-cyber" class="cert-modal">
         <div class="modal-content">
             <a href="#certifications" class="modal-close">&times;</a>
-            <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Introduction to Cybersecurity</h3>
+            <h3 style="color: var(--text-heading); margin-bottom: 0.8rem; font-size: 1.1rem;">Introduction to Cybersecurity</h3>
             <img src="cert_intro_cyber.jpg" alt="Introduction to Cybersecurity Certificate Full Size" class="modal-img">
             
-            <a href="https://www.credly.com/badges/394e27a9-3c8a-4218-85a6-37318b19cac6" target="_blank" class="verify-btn">
+            <a href="YOUR_VERIFY_LINK_HERE" target="_blank" class="verify-btn">
                 Validate Official Credential <i class="fas fa-arrow-right"></i>
             </a>
             
-            <p style="font-size: 0.8rem; color: #bae6fd;">
+            <p style="font-size: 0.75rem; color: #bae6fd;">
                 Select this button to confirm the authenticity of this achievement through the issuing institution's database.
             </p>
         </div>
@@ -593,14 +604,14 @@
     <div id="modal-gicast" class="cert-modal">
         <div class="modal-content">
             <a href="#certifications" class="modal-close">&times;</a>
-            <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Gamified Cyber Aptitude and Skills Training</h3>
+            <h3 style="color: var(--text-heading); margin-bottom: 0.8rem; font-size: 1.1rem;">Gamified Cyber Aptitude and Skills Training</h3>
             <img src="cert_gicast.jpg" alt="GICAST Certificate Full Size" class="modal-img">
             
             <a href="https://www.open.edu/openlearn/badges/badge.php?hash=7d92d7f245f9cef79de07872460ccb901049aa28" target="_blank" class="verify-btn">
                 Validate Official Credential <i class="fas fa-arrow-right"></i>
             </a>
             
-            <p style="font-size: 0.8rem; color: #bae6fd;">
+            <p style="font-size: 0.75rem; color: #bae6fd;">
                 Select this button to confirm the authenticity of this achievement through the issuing institution's database, or scan the QR code featured on the credential document.
             </p>
         </div>
